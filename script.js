@@ -484,7 +484,7 @@ function getDaysBetweenDates(date1, date2) {
     var firstDateMs = Date.parse(date1);
     var secondDateMs = Date.parse(date2);
 
-    result = (secondDateMs - firstDateMs) / oneDayMs;
+    result = Math.abs((secondDateMs - firstDateMs) / oneDayMs);
     console.log(result + ' days between the the two dates');
 
     return (result);
